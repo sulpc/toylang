@@ -1,0 +1,115 @@
+// draw a WIDTH * WIDTH square containing a rhombus in it
+
+func out_points(n) {
+    if n <= 0:    return;
+    for i is 0,n  print('[]')
+}
+
+func out_blanks(n) {
+    if n <= 0     return;
+    for i is 0,n: print('  ')
+}
+
+func draw_line(points, half_width) {
+    // left half
+    out_points(points)          // draw n points
+    if points < half_width      // draw 1 blank if not reach half
+        out_blanks(1)
+    if points + 1 < half_width  // draw points to half
+        out_points(half_width - points - 1)
+
+    // right half
+    out_points(half_width - points - 1)
+    out_blanks(points < half_width ? 1 : 0)
+    out_points(points)
+}
+
+func draw_squre(width) {
+    var half_width = width / 2
+
+    // top half
+    for line is 0,half_width {
+        draw_line(half_width - line, half_width)
+        println()
+    }
+
+    // bottom half
+    for line is 0,half_width {
+        draw_line(line + 1, half_width)
+        println()
+    }
+}
+
+draw_squre(input('input width (even): ', int))
+
+
+/*
+const WIDTH = input('input width (even): ', int)
+
+// top half
+for line is 0,WIDTH/2 {
+    var points = WIDTH/2 - line
+
+    var i = 0
+    while i < points {
+        print('[]')
+        i+=1
+    }
+    if i < WIDTH/2 {
+        print('  ')
+        i+=1
+    }
+    while i < WIDTH/2 {
+        print('[]')
+        i+=1
+    }
+
+    while i < WIDTH-points-1 {
+        print('[]')
+        i+=1
+    }
+    if i < WIDTH-points {
+        print('  ')
+        i+=1
+    }
+    while i < WIDTH {
+        print('[]')
+        i+=1
+    }
+
+    println()
+}
+
+// bottom half
+for line is WIDTH/2,WIDTH {
+    var points = line - WIDTH/2 + 1
+
+    var i = 0
+    while i < points {
+        print('[]')
+        i+=1
+    }
+    if i < WIDTH/2 {
+        print('  ')
+        i+=1
+    }
+    while i < WIDTH/2 {
+        print('[]')
+        i+=1
+    }
+
+    while i < WIDTH-points-1 {
+        print('[]')
+        i+=1
+    }
+    if i < WIDTH-points {
+        print('  ')
+        i+=1
+    }
+    while i < WIDTH {
+        print('[]')
+        i+=1
+    }
+    println()
+}
+*/

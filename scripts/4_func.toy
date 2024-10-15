@@ -1,0 +1,39 @@
+func max(a, b) {
+    println('recv args:', a, b)
+    if (a > b) {
+        return a
+    } else
+        return b
+}
+
+println(max)
+
+var i1 = input('Enter a number: ', int)
+var i2 = input('Enter a number: ', int)
+
+var x = max(i1, i2)
+
+println(x)
+
+
+func repeat_print(N, a, b) {
+    var cnt = 0
+    while true {
+        println(a, b)
+        cnt += 1
+        if cnt == N:
+            break
+    }
+}
+repeat_print(2, "hello", 123)
+
+func add(a, b) {
+    return a + b
+}
+
+var v1 = input('input a number: ', int)
+var v2 = input('input a number: ', float)
+
+var x2 = add(v1, v2)
+
+repeat_print(3, "add(v1, v2) =", x2)

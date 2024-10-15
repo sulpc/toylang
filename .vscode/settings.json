@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.intelliSenseMode": "linux-gcc-x86",
+    "C_Cpp.default.cStandard": "c99",
+    "C_Cpp.default.defines": [
+        "HOST_DEBUG=1"
+    ],
+    "files.exclude": {
+        "objs/": true
+    }
+}

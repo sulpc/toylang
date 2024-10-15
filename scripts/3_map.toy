@@ -1,0 +1,42 @@
+println('simple map test:')
+var m
+
+println('Part 1:')
+
+m = {};                 println(m)
+m[0] = 1;               println(m, m[0])
+m['a'] = 'I am a.';     println(m, m['a'], m.a)
+m.b = 'I am b.';        println(m, m['b'], m.b)
+
+// m = {1, 2, 3}    // set not implement
+
+println('Part 2:')
+
+m = {1: 1024, 'a': 'Alice', 'b': 'Bob'}
+println(m)
+println(m[1])
+// println(m.1)     // ParserError
+println(m['a'])
+println(m.a)
+println(m['b'])
+println(m.b)
+
+m.c = 123
+println(m.c)
+println(m['c'])
+
+m.d = 'Doctor'
+println(m.d)
+println(m['d'])
+
+m.f = println
+println(m.f)
+println(m['f'])
+
+m.f('call m.f')
+m['f']('call m.f')
+
+println('m =', m)
+println('foreach:')
+for k, v in m
+    println(k, v)

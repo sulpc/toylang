@@ -1,0 +1,25 @@
+func factorial(n) {
+    if n == 0
+        return 1
+    else
+        return n * factorial(n - 1)
+}
+
+func fibonacci(n) {
+    if n == 0
+        return 1
+    elif n == 1
+        return 1
+    else
+        return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
+
+println('factorial:');
+for n is 0,10
+    println(n, ': ', factorial(n))
+
+
+println('fibonacci:');
+for n is 0,10
+    println(n, ': ', fibonacci(n));

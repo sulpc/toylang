@@ -1,0 +1,41 @@
+println('simple list test:')
+
+var i1, s1, l1, l2 = 123, 'hello', [], [1,2,3];
+var ll = [123, 'hello', [], [1,2,3], i1, s1, l1, l2]
+
+println(ll)
+println('[0]:', ll[0])
+println('[1]:', ll[1])
+println('[2]:', ll[2])
+println('[3]:', ll[3])
+println('[4]:', ll[4])
+println('[5]:', ll[5])
+println('[6]:', ll[6])
+println('[7]:', ll[7])
+// println('[8]:', ll[8])      // list index(8) out of range
+println('[-0]:', ll[-0])
+println('[-1]:', ll[-1])
+println('[-2]:', ll[-2])
+println('[-3]:', ll[-3])
+println('[-4]:', ll[-4])
+println('[-5]:', ll[-5])
+println('[-6]:', ll[-6])
+println('[-7]:', ll[-7])
+println('[-8]:', ll[-8])
+// println('[-9]:', ll[-9])    // list index(-9) out of range
+
+println('modify:')
+ll[0] = ['x']; println(ll)
+ll[1] = ['x']; println(ll)
+ll[2] = ['x']; println(ll)
+ll[3] = ['x']; println(ll)
+ll[4] = ['x']; println(ll)
+ll[5] = ['x']; println(ll)
+ll[6] = ['x']; println(ll)
+ll[7] = ['x']; println(ll)
+// ll[8] = ['x']; println(ll)
+
+println('add function value in list:')
+ll[0] = println
+println(ll)
+ll[0](ll)
