@@ -14,6 +14,8 @@
 
 #include "util_types.h"
 
+#define UTIL_HEAP_BUFFER_SIZE (120 * 1024)
+
 void*       util_malloc(util_size_t nbytes);
 void        util_free(void* ptr);
 void*       util_realloc(void* optr, util_size_t nsize);

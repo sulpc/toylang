@@ -247,7 +247,7 @@ void         tl_parser_init(tl_parser_t* parser, const char* code);
 tl_program_t tl_parser_parse(tl_parser_t* parser);
 void         tl_parser_dump(tl_program_t* program);
 void         tl_parser_free(tl_program_t* program);
-void         tl_parser_free_error();
+void         tl_parser_free_error(void);
 void         free_stat(tl_stat_t* stat);
 void         free_expr(tl_expr_t* expr);
 

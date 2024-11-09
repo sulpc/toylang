@@ -1,7 +1,7 @@
 CC          := i686-w64-mingw32-gcc
-SUBDIRS     := basic vm complier utils utils/heap utils/queue
+SUBDIRS     := . toylang/basic toylang/vm toylang/complier utils utils/heap utils/queue
 OBJDIR      := objs
-TARGET      := toylang
+TARGET      := tl
 CFLAGS      := $(addprefix -I,$(SUBDIRS)) -Wall -g -DHOST_DEBUG=1
 LDFLAGS     := -g
 

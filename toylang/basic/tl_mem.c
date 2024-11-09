@@ -7,11 +7,7 @@
 #define mem_strategy_myheap   1
 #define mem_strategy_freertos 2
 
-#ifdef HOST_DEBUG
 #define mem_strategy mem_strategy_myheap
-#else
-#define mem_strategy mem_strategy_freertos
-#endif
 
 #if mem_strategy == mem_strategy_stdlib
 #include <stdlib.h>

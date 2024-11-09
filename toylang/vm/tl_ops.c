@@ -238,6 +238,7 @@ bool tl_op_conv2bool(tl_value_t* v)
     }
 
     tl_panic(TL_PANIC_TYPE, "conv2bool for type <%d> not support!", v->vtype);
+    return false;
 }
 
 void tl_op_binop(tl_token_t opt, tl_value_t* a, tl_value_t* b, tl_value_t* ret)
@@ -298,7 +299,7 @@ void tl_op_uniop(tl_token_t opt, tl_value_t* v, tl_value_t* ret)
         ret->vtype = TL_TYPE_BOOL;
         ret->vv.b  = !tl_op_conv2bool(v);
         return;
-    } break;
+    }   // break;
     // ~
     case TOKEN_BNOT: {
         if (vtype == TL_TYPE_INT) {

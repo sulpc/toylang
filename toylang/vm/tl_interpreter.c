@@ -137,7 +137,7 @@ static void init_builtins(tl_scope_t* scope)
 }
 
 
-void tl_interpreter_start()
+void tl_interpreter_start(void)
 {
     // scope init
     tl_scope_t* scope = scope_new("global", TL_SCOPE_TYPE_GLOBAL);
@@ -145,7 +145,7 @@ void tl_interpreter_start()
     scope_enter(scope);
 }
 
-void tl_interpreter_exit()
+void tl_interpreter_exit(void)
 {
     tl_scope_t* scope = tl_env.cur_scope;
     scope_exit();

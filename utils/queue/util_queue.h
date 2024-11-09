@@ -42,4 +42,7 @@ struct util_queue_node_t {
 
 #define util_queue_empty(node) (((node)->prev == (node)) && ((node)->next == (node)))
 
+#define util_queue_foreach(node_, queue_)                                                                              \
+    for (util_queue_node_t* node_ = (queue_)->next; node_ != (queue_); node_ = node_->next)
+
 #endif

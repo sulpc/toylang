@@ -193,7 +193,7 @@ void tl_parser_free(tl_program_t* program)
 }
 
 
-void tl_parser_free_error()
+void tl_parser_free_error(void)
 {
     for (tl_stat_t* s = stat_all; s != nullptr;) {
         tl_stat_t* prev = s->prev_all;

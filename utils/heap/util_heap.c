@@ -37,14 +37,14 @@ typedef struct {
 } memblk_t;
 
 // clang-format off
-#define HEAP_SIZE                  (120 * 1024)  // heap size
-#define HEAP_ADDR_ALIGN            4             //
-#define HEAP_SMALL_BLK_MAX         512u          // max small block size
-#define HEAP_BLK_SIZE_UNIT         8u            // block size will round up to a multiple of HEAP_BLK_SIZE_UNIT
+#define HEAP_SIZE                  UTIL_HEAP_BUFFER_SIZE  // heap size
+#define HEAP_ADDR_ALIGN            4                      //
+#define HEAP_SMALL_BLK_MAX         512u                   // max small block size
+#define HEAP_BLK_SIZE_UNIT         8u                     // block size will round up to a multiple of HEAP_BLK_SIZE_UNIT
 
 #define HEAP_ADDR_START            ((uint8_t*)heap_space)
 #define HEAP_ADDR_END              ((uint8_t*)heap_space + sizeof(heap_space))
-#define HEAP_BLK_MAGIC_MASK        0xA5000000   // used to identify the allocated blocks
+#define HEAP_BLK_MAGIC_MASK        0xA5000000             // used to identify the allocated blocks
 #define HEAP_BLK_SIZE_MASK         0x00FFFFFF
 #define HEAP_BLK_HEAD_SIZE         sizeof(blkhead_t)
 #define HEAP_BLK_MIN_SIZE          sizeof(memblk_t)
